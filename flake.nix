@@ -9,6 +9,8 @@
     let
       makes = import ./default.nix { system = "x86_64-linux"; };
 
+      overlay = import ./overlay.nix;
+
       lib.flakes.evaluate =
         { inputs
         , system
